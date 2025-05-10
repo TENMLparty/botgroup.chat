@@ -1,9 +1,14 @@
+# 添加 Pages 专用配置
+[pages]
+pages_build_output_dir = "dist"  # 替换为实际构建输出目录（如 public、build 等）
+
+# 保留原有 Workers 绑定配置（若确实需要）
 [[kv_namespaces]]
 binding = "bgkv"
-id = "cbd11575c3504e6bb043c1c250d2f7ed"
-preview_id = "cbd11575c3504e6bb043c1c250d2f7ed"  # 本地开发环境使用 
+id = "bd11575c3504e6bb043c1c250d2f7ed"  # 移除尖括号 <>
+preview_id = "bd11575c3504e6bb043c1c250d2f7ed"
 
-[[d1_databases]]
-binding = "bgdb" # available in your Worker on env.DB
-database_name = "friends"
-database_id = "f68e9fa5-4aea-45db-9516-2d7052e936fa"
+[[dl_databases]]
+binding = "bgdb"
+database_name = "friends"        # 移除开头的 /
+database_id = "f68e9fa5-4aea-45db-9516-2d7052e936fa"  # 移除开头的 /
